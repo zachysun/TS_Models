@@ -9,17 +9,23 @@ You can access the well pre-processed datasets from [Google Drive](https://drive
 
 The Environment in these two eperiments is not complicated, just follow one of original repo, it will be fine.
 
+## Models
+
+- (Previous: LLaTA) CALF: Aligning LLMs for Time Series Forecasting via Cross-modal Fine-Tuning [[pdf](https://arxiv.org/pdf/2403.07300)] [[official code](https://github.com/Hank0626/CALF)]
+- Time-LLM: Time Series Forecasting by Reprogramming Large Language Models [[paper](https://arxiv.org/abs/2310.01728)] [[official code](https://github.com/KimMeen/Time-LLM)]
+- One Fits All: Power General Time Series Analysis by Pretrained LM [[pdf](https://openreview.net/pdf?id=gMS6FVZvmF)] [[official code](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All)]
+
 ## Run LLaTA experiments
      cd ./LLaTA
 
 ### For ETT experiments :
 
     sh scripts/long_term_forecasting/ETTh_GPT2.sh
-
-    sh scripts/long_term_forecasting/ETTm_GPT2.sh
     
+    sh scripts/long_term_forecasting/ETTm_GPT2.sh
+
 ### For other datasets, such as traffic:
-   
+
     sh scripts/long_term_forecasting/traffic.sh 
 
 ### (Please change "itt" parameters in script, if you only want to test)
@@ -29,11 +35,11 @@ The Environment in these two eperiments is not complicated, just follow one of o
     cd ./OFA
 
 ### For ETT experiments :
-   
+
      bash ./scripts/ETTh_GPT2.sh   
-  
+      
      bash ./scripts/ETTm_GPT2.sh
-  
+
 ### For other datasets, such as illness:
 
      bash ./scripts/illness.sh 
@@ -47,7 +53,7 @@ The Environment in these two eperiments is not complicated, just follow one of o
      bash ./scripts/train_script/TimeLLM_ETTh2.sh 
      bash ./scripts/train_script/TimeLLM_ETTm1.sh 
      bash ./scripts/train_script/TimeLLM_ETTm2.sh 
-     
+
 ### For other datasets
 
      bash ./scripts/train_script/TimeLLM_Weather.sh
@@ -62,15 +68,14 @@ The Environment in these two eperiments is not complicated, just follow one of o
 
 
 ## For "simple metheds" : 
-     
-     bash ./scripts/simple/ETTh_simple.sh (for ETTh)
 
+     bash ./scripts/simple/ETTh_simple.sh (for ETTh)
+    
      bash ./scripts/simple/ETTm_simple.sh (for ETTm)
-     
+
 ### simple methods, other dataset, for example Weather
 
      bash ./scripts/simple/weather.sh 
 
 ## Note that, the method and in script, "multi_patch_attn", means "PAttn". And the mehtod name, "multi_linr_trsf", means "LTrsf"
-     
 
